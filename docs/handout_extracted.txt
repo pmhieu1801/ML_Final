@@ -1,0 +1,440 @@
+Introduction to Machine Learning
+Final Project: Scholarship Prediction System Development
+Official Handout, Companion Guide, and Rubric
+Course: Introduction to Machine Learning
+Project Type: Final Project
+Team Size: 2 students per team
+Project Duration: 4 weeks
+Submission deadline: May 15, 2026
+Minimum Report Length: 25 pages (excluding appendix)
+Department / School: ____________________________________
+Student Name(s): _______________________________________
+Semester / Academic Year: _______________________________
+This document extends the midterm project on scholarship prediction into a more rigorous and better-structured final project.
+
+[Trang 2 - image_d20a1c.png]
+Introduction to Machine Learning | Final Project Handout
+Contents
+1 Official Final Project Handout | 2 1.1 Project Overview . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2 1.2 Team Policy . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2 1.3 Problem Statement . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2 1.4 Project Objectives . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2 1.5 Required Tasks . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3 1.5.1 Task 1. Baseline System . . . . . . . . . . . . . . . . . . . . . 3 1.5.2 Task 2. Exploratory Data Analysis . . . . . . . . . . . . . . . 3 1.5.3 Task 3. Data Preprocessing . . . . . . . . . . . . . . . . . . . 4 1.5.4 Task 4. Model Development . . . . . . . . . . . . . . . . . . 4 1.5.5 Task 5. System Improvement . . . . . . . . . . . . . . . . . . 4 1.5.6 Task 6. Model Evaluation . . . . . . . . . . . . . . . . . . . . 5 1.5.7 Task 7. Error Analysis . . . . . . . . . . . . . . . . . . . . . 5 1.5.8 Task 8. Model Interpretation . . . . . . . . . . . . . . . . . . 5 1.5.9 Task 9. Final Recommendation . . . . . . . . . . . . . . . . . 6 1.6 Submission Requirements . . . . . . . . . . . . . . . . . . . . . . . . 6 1.7 Report Requirements . . . . . . . . . . . . . . . . . . . . . . . . . . 6 1.8 Suggested Timeline . . . . . . . . . . . . . . . . . . . . . . . . . . . 6 1.9 Academic Integrity . . . . . . . . . . . . . . . . . . . . . . . . . . . 7
+2 Companion Guide for Students | 8 2.1 How to Conduct Exploratory Data Analysis Properly . . . . . . . . . . . 8 2.2 Preprocessing Decision Guide . . . . . . . . . . . . . . . . . . . . . . 9 2.3 Model Comparison Guide . . . . . . . . . . . . . . . . . . . . . . . . 9 2.4 Hyperparameter Tuning Guide . . . . . . . . . . . . . . . . . . . . . . 10 2.5 Error Analysis Guide . . . . . . . . . . . . . . . . . . . . . . . . . . 10 2.6 Interpretation Guide . . . . . . . . . . . . . . . . . . . . . . . . . . 11 2.7 Report Writing Guide . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+3 Rubric (10-Point Scale) | 13 3.1 Performance Levels . . . . . . . . . . . . . . . . . . . . . . . . . . . 13 3.2 Minimum Conditions for a Passing Submission . . . . . . . . . . . . . 15 3.3 Internal Notes for the Instructor (Optional) . . . . . . . . . . . . . . . 15
+4 Recommended Submission Checklist | 16
+5 Concluding Note | 16
+1/16
+
+[Trang 3 - image_d20776.png]
+Introduction to Machine Learning | Final Project Handout
+1. Official Final Project Handout
+1.1. Project Overview
+In the midterm project, students implemented a basic machine learning pipeline for predicting whether a student receives a scholarship. The project focused on the essential stages of a classical machine learning workflow, including exploratory data analysis, data preprocessing, model training, model evaluation, and error analysis.
+In the final project, each team will extend that midterm system into a more rigorous and better-justified machine learning solution. The objective is not merely to train models and report metrics. Instead, the final project is intended to assess whether students can:
+establish a clear baseline system,
+compare multiple models systematically,
+improve the original pipeline in a meaningful way,
+evaluate model behavior using appropriate metrics,
+analyze errors in a structured manner,
+interpret the resulting model,
+and present the complete work in a professional technical report.
+This final project is designed to simulate a more complete applied machine learning workflow while remaining appropriate for an introductory course in machine learning.
+1.2. Team Policy
+Students must work in teams of two.
+All team members are expected to contribute substantially to the project.
+The final report must include a short statement describing the contribution of each team member.
+1.3. Problem Statement
+The dataset contains records of students in a hypothetical country. Each record describes a student using academic and socio-economic attributes. The task is to build a machine learning system that predicts whether a student receives a scholarship.
+1.4. Project Objectives
+By the end of this project, each team should be able to:
+2/16
+
+[Trang 4 - image_d20771.png]
+Introduction to Machine Learning | Final Project Handout
+construct a complete and reproducible machine learning pipeline;
+justify preprocessing and modeling decisions using evidence from the data;
+compare at least three machine learning models in a principled way;
+introduce at least one meaningful improvement over the midterm pipeline;
+interpret model behavior using an appropriate method;
+and communicate the work clearly in a formal report.
+1.5. Required Tasks
+1.5.1. Task 1. Baseline System
+Each team must first reconstruct a clear baseline system based on the midterm project. The baseline should include:
+a concise description of the data,
+essential exploratory data analysis,
+preprocessing steps,
+at least one baseline model,
+and initial evaluation results.
+The purpose of the baseline is to provide a reference point for later improvements.
+1.5.2. Task 2. Exploratory Data Analysis
+Teams must analyze the dataset in a systematic manner. At minimum, the report should include:
+dataset size and structure,
+feature types,
+descriptive statistics,
+target distribution,
+visualizations of important variables,
+and identification of possible data quality issues.
+EDA should support later modeling decisions rather than merely present a collection of figures.
+3/16
+
+[Trang 5 - image_d20756.png]
+Introduction to Machine Learning | Final Project Handout
+1.5.3. Task 3. Data Preprocessing
+Teams must apply appropriate preprocessing steps and justify each decision. Possible preprocessing steps include:
+handling missing values,
+encoding categorical variables,
+normalization or scaling,
+train/validation/test splitting,
+and optional handling of class imbalance.
+All preprocessing choices must be explained clearly. Teams should also demonstrate awareness of common mistakes such as data leakage.
+1.5.4. Task 4. Model Development
+Each team must train at least three machine learning models. The set of models must include:
+one linear model, preferably Logistic Regression;
+one tree-based model, such as Decision Tree or Random Forest;
+one additional classical machine learning model, such as SVM, KNN, Gradient Boosting, XGBoost, or another approved method.
+The goal is to compare models with different inductive biases and practical trade-offs.
+1.5.5. Task 5. System Improvement
+Compared with the midterm version, the final project must include at least one meaningful improvement. Examples include:
+a better preprocessing strategy,
+feature engineering,
+hyperparameter tuning,
+handling class imbalance,
+a more appropriate validation strategy,
+or improved metric selection.
+The improvement must be stated explicitly and justified using evidence.
+4/16
+
+[Trang 6 - image_d20750.png]
+Introduction to Machine Learning | Final Project Handout
+1.5.6. Task 6. Model Evaluation
+Teams must evaluate and compare models using appropriate metrics.
+The following metrics are required:
+Accuracy,
+Precision,
+Recall,
+F1-score,
+and Confusion Matrix.
+The following metrics are recommended when appropriate:
+ROC-AUC,
+PR-AUC.
+Evaluation results must be presented clearly in tables and/or figures, followed by interpretation in prose.
+1.5.7. Task 7. Error Analysis
+Teams must analyze model errors in a structured way. This section should discuss:
+typical false positives,
+typical false negatives,
+possible reasons for wrong predictions,
+and important limitations of the current system.
+1.5.8. Task 8. Model Interpretation
+Teams must provide at least one form of model interpretation, for example:
+coefficient analysis for Logistic Regression,
+feature importance for tree-based models,
+or permutation-based importance.
+The purpose of this section is to explain which features appear to influence predictions and whether the model behavior is reasonable.
+5/16
+
+[Trang 7 - image_d20735.png]
+Introduction to Machine Learning | Final Project Handout
+1.5.9. Task 9. Final Recommendation
+Each team must recommend one final model for deployment and justify the decision based on:
+predictive performance,
+stability,
+interpretability,
+and practical considerations.
+1.6. Submission Requirements
+Each team must submit the following files:
+report.pdf, notebook.ipynb, predictions.csv
+The following files are optional but strongly recommended:
+README.md
+requirements.txt
+1.7. Report Requirements
+The final report must satisfy all of the following conditions:
+it must be written clearly and professionally in English;
+it must include figures, tables, and technical discussion;
+it must be at least 15 pages, excluding appendix if any;
+it must explain not only what was done, but also why the decisions were made.
+Reports that only contain screenshots, large code dumps, or raw notebook output with minimal discussion will receive low marks.
+1.8. Suggested Timeline
+Week 1
+rebuild the baseline system,
+perform exploratory data analysis,
+finalize preprocessing,
+and train at least three initial models.
+6/16
+
+[Trang 8 - image_d20719.png]
+Introduction to Machine Learning | Final Project Handout
+Week 2
+introduce at least one clear improvement,
+tune selected model(s),
+compare results systematically,
+and organize tables and figures.
+Week 3
+conduct error analysis,
+add model interpretation,
+finalize the report,
+and prepare the submission package.
+1.9. Academic Integrity
+Teams must ensure that:
+all submitted work is their own;
+external code, ideas, or resources are properly acknowledged;
+the final report accurately reflects the work performed by the team;
+and no misleading claims are made regarding experiments, results, or contributions.
+7/16
+
+[Trang 9 - image_d20713.png]
+Introduction to Machine Learning | Final Project Handout
+2. Companion Guide for Students
+This companion guide provides additional guidance for parts of the project that students often perform superficially or incorrectly. It is not a solution manual. Instead, it is intended to help teams meet the expected academic and technical standard of the final project.
+2.1. How to Conduct Exploratory Data Analysis Properly
+Exploratory Data Analysis (EDA) is not a collection of random charts. Its purpose is to help you understand the data and support later modeling decisions.
+A good EDA section should help answer questions such as:
+How many samples and features are there?
+Which variables are numerical, and which are categorical?
+Is the target variable balanced or imbalanced?
+Are there suspicious values, missing values, or unusual distributions?
+Which variables appear to be related to scholarship status?
+Recommended analyses include:
+summary statistics for numerical features,
+frequency tables for categorical features,
+target distribution,
+histograms or boxplots for important numerical variables,
+bar charts for important categorical variables,
+and correlation analysis where appropriate.
+Common mistakes include:
+presenting many charts without explanation,
+writing observations that are obvious but not useful,
+discussing plots that do not influence later decisions,
+and confusing correlation with causation.
+8/16
+
+[Trang 10 - image_d206f8.png]
+Introduction to Machine Learning | Final Project Handout
+2.2. Preprocessing Decision Guide
+Preprocessing should be motivated by the properties of the data and the requirements of the model.
+Typical preprocessing tasks include:
+missing-value imputation,
+categorical encoding,
+scaling or normalization,
+and proper splitting of train, validation, and test data.
+Examples of good reasoning:
+Logistic Regression and SVM often benefit from feature scaling.
+Tree-based models usually do not require scaling.
+One-hot encoding is often suitable for nominal categorical variables.
+Missing values should be handled using a reproducible method rather than arbitrary manual edits.
+Important Warning: Data Leakage
+Teams must avoid leakage. For example:
+do not fit a scaler on the full dataset before splitting;
+do not tune hyperparameters directly on the test set;
+do not construct features using label information in an improper way.
+2.3. Model Comparison Guide
+Training multiple models is meaningful only when the comparison is well reasoned.
+At minimum, teams should discuss:
+which model performs best overall,
+whether some models achieve higher precision but lower recall,
+whether a more complex model actually yields meaningful improvement,
+and whether the best model is also the most practical one.
+A clear comparison table is strongly recommended, for example:
+9/16
+[Trang 10 - image_d2065d.png]
+Introduction to Machine Learning | Final Project Handout
+Model
+Accuracy
+Precision
+Recall
+F1
+Notes
+Model A
+--
+--
+--
+--
+--
+Model B
+--
+--
+--
+--
+--
+Model C
+--
+--
+--
+--
+--
+The table should be followed by technical discussion rather than left unexplained.
+2.4. Hyperparameter Tuning Guide
+Hyperparameter tuning is one common way to improve the system, although it should be performed in a controlled and meaningful way.
+Recommended approach:
+choose one or two promising models,
+define a small and reasonable search space,
+use cross-validation or a proper validation split,
+and report both the selected parameters and the resulting performance changes.
+Examples of parameters that may be tuned:
+Logistic Regression: C, penalty type;
+Decision Tree:max_depth, min_samples_split;
+Random Forest:n_estimators, max_depth;
+SVM: C, kernel, gamma.
+Common mistakes include:
+tuning too many parameters blindly,
+tuning directly on the test set,
+and reporting the best score without explaining why the change matters.
+2.5. Error Analysis Guide
+Error analysis is required because metrics alone do not explain model behavior.
+Teams should analyze:
+false positives,
+false negatives,
+difficult or borderline cases,
+10/16
+
+[Trang 11 - image_d203b7.png]
+Introduction to Machine Learning | Final Project Handout
+and recurring patterns among wrong predictions.
+Useful guiding questions:
+Are students with a certain profile frequently misclassified?
+Are borderline academic records especially difficult for the model?
+Does the model struggle when academic features and socio-economic features point in different directions?
+A strong error analysis section should present concrete examples or groups of examples, propose plausible explanations, and connect those observations to limitations of the data or the model.
+2.6. Interpretation Guide
+Interpretability means explaining model behavior in a technically responsible way.
+Possible methods include:
+Logistic Regression coefficients,
+feature importance from tree-based models,
+permutation importance.
+Teams should discuss:
+which features seem most influential,
+whether the model's behavior matches domain intuition,
+and whether any apparently important feature raises practical or ethical concerns.
+Important Caution
+A feature being important does not prove causation. Students must avoid causal claims that are not supported by the project design.
+2.7. Report Writing Guide
+A strong report is more than a cleaned-up notebook. It should tell a coherent technical story.
+A good report should:
+define the problem clearly,
+explain methods and decisions,
+11/16
+
+[Trang 12 - image_d203b0.png]
+Introduction to Machine Learning | Final Project Handout
+present results systematically,
+interpret those results,
+and conclude with a reasoned recommendation.
+Recommendations for writing:
+use captions for all figures and tables;
+refer to figures and tables explicitly in the text;
+do not paste large amounts of code into the report;
+do not write sections consisting only of bullet points;
+do not leave charts or tables unexplained.
+A recommended report structure is as follows:
+Introduction
+Dataset Description
+Exploratory Data Analysis
+Data Preprocessing
+Models and Baseline
+Improvement Strategy
+Experimental Results
+Error Analysis
+Model Interpretation
+Conclusion
+Appendix
+12/16
+
+[Trang 13 - image_d20395.png]
+Introduction to Machine Learning | Final Project Handout
+3. Rubric (10-Point Scale)
+The final project is graded on a 10-point scale. The rubric below is intended to make expectations transparent and to support consistent grading.
+Criterion
+Points
+Description
+Problem Understanding and Dataset Description
+1.0
+Clear presentation of the task, the prediction target, the dataset characteristics, and the scope of the project.
+Exploratory Data Analysis
+1.0
+Meaningful analysis of data structure, variable types, target distribution, and major data issues. Figures and discussion should support later decisions.
+Data Preprocessing
+1.5
+Appropriate preprocessing choices, sound justification, and correct methodology. Avoidance of leakage is especially important.
+Model Development (at least 3 models)
+2.0
+Training and comparison of at least three suitable models, including one linear model, one tree-based model, and one additional model.
+System Improvement
+1.5
+At least one meaningful improvement over the midterm baseline, such as tuning, feature engineering, imbalance handling, or a stronger validation strategy.
+Evaluation and Comparison
+1.5
+Clear reporting and interpretation of required metrics, with coherent comparison across models.
+Error Analysis and Interpretation
+1.0
+Structured analysis of prediction errors and at least one form of model interpretation.
+Report Quality and Reproducibility
+0.5
+Clarity of writing, logical organization, adequate technical detail, and evidence that the workflow can be followed and understood.
+3.1. Performance Levels
+The following qualitative interpretation may be used during grading.
+1. Problem Understanding and Dataset Description (1.0 point)
+0.0–0.4: Vague or incomplete description of the task and dataset.
+13/16
+
+[Trang 14 - image_d2038f.png]
+Introduction to Machine Learning | Final Project Handout
+0.5–0.7: Acceptable description, but still somewhat superficial.
+0.8–1.0: Clear and well-scoped explanation of the task, dataset, and project objective.
+2. Exploratory Data Analysis (1.0 point)
+0.0–0.4: Very limited EDA or mostly descriptive figures without insight.
+0.5–0.7: Basic EDA is present, but interpretation remains shallow.
+0.8–1.0: EDA is structured and highlights meaningful characteristics and issues in the data.
+3. Data Preprocessing (1.5 points)
+0.0–0.5: Preprocessing is incomplete, weakly justified, or methodologically flawed.
+0.6–1.0: Basic preprocessing is present but explanation is limited.
+1.1–1.5: Preprocessing is appropriate, well justified, and methodologically correct.
+4. Model Development (2.0 points)
+0.0–0.7: Too few models or inadequate implementation.
+0.8–1.4: Required number of models is met, but comparison or implementation quality is limited.
+1.5–2.0: Strong implementation and comparison of at least three suitable models.
+5. System Improvement (1.5 points)
+0.0–0.5: No clear improvement beyond the midterm baseline.
+0.6–1.0: Some improvement is present but weakly justified.
+1.1–1.5: At least one meaningful and well-argued improvement is demonstrated.
+6. Evaluation and Comparison (1.5 points)
+0.0–0.5: Metrics are missing, insufficient, or poorly interpreted.
+0.6–1.0: Core metrics are reported, but the comparison remains limited.
+1.1–1.5: Evaluation is clear, complete, and technically well discussed.
+7. Error Analysis and Interpretation (1.0 point)
+0.0–0.4: Minimal or missing error analysis and interpretation.
+14/16
+
+[Trang 15 - image_d20373.png]
+Introduction to Machine Learning | Final Project Handout
+0.5–0.7: Basic analysis is present but still superficial.
+0.8–1.0: Error analysis and interpretation are concrete, useful, and technically sound.
+8. Report Quality and Reproducibility (0.5 point)
+0.0–0.2: Report is poorly organized or difficult to follow.
+0.3–0.4: Report is readable but still has weaknesses in structure or technical clarity.
+0.5: Report is clear, coherent, and professionally presented.
+3.2. Minimum Conditions for a Passing Submission
+A project is unlikely to receive a satisfactory grade if any of the following conditions is not met:
+fewer than three models are trained and compared;
+the report is shorter than 15 pages excluding appendix;
+error analysis is missing;
+model comparison is unclear or not supported by evidence.
+3.3. Internal Notes for the Instructor (Optional)
+The following notes may be useful for internal grading consistency:
+deduct marks if a team presents only trivial parameter changes as a major improvement;
+deduct marks if the report largely duplicates notebook output without technical discussion;
+deduct marks if reported metrics are inconsistent with the described methodology;
+deduct marks if leakage is present and not identified by the team;
+reward careful and honest discussion of limitations where appropriate.
+15/16
+
+[Trang 16 - image_d20356.png]
+Introduction to Machine Learning | Final Project Handout
+4. Recommended Submission Checklist
+Before submission, each team should verify the following:
+The report is written in English and is at least 15 pages long, excluding appendix.
+At least three models have been trained and compared.
+Required evaluation metrics are reported clearly.
+At least one meaningful improvement over the midterm baseline is presented.
+Error analysis is included.
+Model interpretation is included.
+Submitted files follow the required naming and formatting conventions.
+The notebook runs in a reproducible and understandable manner.
+5. Concluding Note
+This final project is intended to assess both practical machine learning skills and scientific reporting ability. Strong submissions will not necessarily be those with the single highest metric, but those that present a clear methodology, sound reasoning, careful evaluation, and honest technical discussion.
+
